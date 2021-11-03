@@ -8,5 +8,5 @@
 
 (function () {
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['aspects']['PersistedSanitizedPatternMapper']
-        = \Calien\PersistedPatternRouting\Routing\Aspect\PersistedSanitizedPatternMapper::class;
+        = \Calien\PersistedSanitizedRouting\Routing\Aspect\PersistedSanitizedPatternMapper::class;
 })();

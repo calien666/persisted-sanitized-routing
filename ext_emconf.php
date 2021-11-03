@@ -6,7 +6,7 @@
  */
 
 
-$EM_CONF['locations'] = [
+$EM_CONF['persisted_sanitized_routing'] = [
     'title' => 'Persisted Sanitized Pattern Aspect for routing',
     'description' => 'Adds a sanitized pattern mapper aspect to the routing feature for TYPO3',
     'category' => 'plugin',
@@ -14,7 +14,7 @@ $EM_CONF['locations'] = [
     'author_email' => 'typo3@calien.de',
     'state' => 'beta',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'constraints' => [
         'depends' => [
             'typo3' => '9.5.0-11.5.99',
@@ -22,4 +22,9 @@ $EM_CONF['locations'] = [
         'conflicts' => [],
         'suggests' => [],
     ],
+    'autoload' => [
+        'PSR-4' => [
+            'Calien\\PersistedSanitizedRouting\\' => 'Classes'
+        ]
+    ]
 ];

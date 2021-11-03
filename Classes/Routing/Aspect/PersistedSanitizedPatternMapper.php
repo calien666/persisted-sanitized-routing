@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Calien\PersistedPatternRouting\Routing\Aspect;
+namespace Calien\PersistedSanitizedRouting\Routing\Aspect;
 
 use TYPO3\CMS\Core\DataHandling\SlugHelper;
 use TYPO3\CMS\Core\Routing\Aspect\PersistedPatternMapper;

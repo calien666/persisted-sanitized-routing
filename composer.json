@@ -1,5 +1,5 @@
 {
-  "name": "calien/persisted-pattern-routing",
+  "name": "calien/persisted-sanitized-routing",
   "type": "typo3-cms-extension",
   "description": "Persisted Sanitized Pattern Routing for TYPO3",
   "authors": [
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Calien\\PersistedPatternRouting\\": "Classes"
+      "Calien\\PersistedSanitizedRouting\\": "Classes"
     }
   },
   "extra": {
