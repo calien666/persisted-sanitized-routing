@@ -1,0 +1,31 @@
+{
+  "name": "calien/persisted-pattern-routing",
+  "type": "typo3-cms-extension",
+  "description": "Persisted Sanitized Pattern Routing for TYPO3",
+  "authors": [
+    {
+      "name": "Markus Hofmann",
+      "role": "Developer",
+      "email": "typo3@calien.de"
+    }
+  ],
+  "keywords": [
+    "TYPO3",
+    "Routing"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.3",
+    "typo3/cms-core": "^9.5 | ^10.4 | ^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Calien\\PersistedPatternRouting\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "persisted_pattern_routing"
+    }
+  }
+}
