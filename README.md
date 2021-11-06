@@ -3,6 +3,12 @@
 ## What does it do?
 
 Enables the possibility generating sanitized URL parts from persisted patterns.
+The default PersistedPatternAspect takes e.g. database values and uses them "as they are",
+including umlauts, special characters and spaces, which will return them into your url and
+result in unexpected behaviours.
+
+This PersistedSanitizedRoutingAspect encodes and decodes the database part and 
+will make better readable URL parts.
 
 ## How does it work?
 
@@ -13,7 +19,7 @@ aspects:
   country:
     type: PersistedSanitizedPatternMapper
     tableName: static_countries
-    routeFieldPattern: '^(.*)-(?P<uid>\d+)$'
+    routeFieldPattern: '^(?P<cn_short_de>[\w-]+)-(?P<uid>\d+)$'
     routeFieldResult: '{cn_short_de|sanitized}-{uid}'
     localeMap:
       - locale: 'de_*'
@@ -23,7 +29,7 @@ aspects:
   territory:
     type: PersistedSanitizedPatternMapper
     tableName: static_territories
-    routeFieldPattern: '^(.*)-(?P<uid>\d+)$'
+    routeFieldPattern: '^(?P<tr_name_de>[\w-]+)-(?P<uid>\d+)$'
     routeFieldResult: '{tr_name_de|sanitized}-{uid}'
     localeMap:
       - locale: 'de_*'
@@ -36,4 +42,5 @@ As you can see, localization is respected, if needed.
 
 ## Installation
 
-Only install the extension and configure your persisted pattern mappers as described above. 
+Only install the extension and configure your persisted pattern mappers as described above fitting your needs.
+The |sanitized part will respect the field you want to sanitize.

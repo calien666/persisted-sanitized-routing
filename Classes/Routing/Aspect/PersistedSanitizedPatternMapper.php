@@ -154,6 +154,7 @@ class PersistedSanitizedPatternMapper extends PersistedPatternMapper
             $pattern = '#^' . $item['locale'] . '#i';
             if (preg_match($pattern, $locale)) {
                 $localizedFieldName = (string)$item['field'];
+                $this->routeFieldPattern = str_replace($this->routeFieldResultNames[0], $localizedFieldName, $this->routeFieldPattern);
                 $this->routeFieldResult = str_replace($this->routeFieldResultNames[0], $localizedFieldName, $this->routeFieldResult);
                 $this->routeFieldResultNames[0] = $localizedFieldName;
             }
