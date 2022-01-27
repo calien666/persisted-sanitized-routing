@@ -25,7 +25,7 @@
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "persisted_pattern_routing"
+      "extension-key": "persisted_sanitized_routing"
     }
   }
 }
