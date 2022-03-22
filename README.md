@@ -19,7 +19,7 @@ aspects:
   country:
     type: PersistedSanitizedPatternMapper
     tableName: static_countries
-    routeFieldPattern: '^(?P<cn_short_de>[\w-]+)-(?P<uid>\d+)$'
+    routeFieldPattern: '^(.*)-(?P<uid>\d+)$'
     routeFieldResult: '{cn_short_de|sanitized}-{uid}'
     localeMap:
       - locale: 'de_*'
