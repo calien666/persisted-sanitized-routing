@@ -29,7 +29,7 @@ aspects:
   territory:
     type: PersistedSanitizedPatternMapper
     tableName: static_territories
-    routeFieldPattern: '^(?P<tr_name_de>[\w-]+)-(?P<uid>\d+)$'
+    routeFieldPattern: '^(.*)-(?P<uid>\d+)$'
     routeFieldResult: '{tr_name_de|sanitized}-{uid}'
     localeMap:
       - locale: 'de_*'
