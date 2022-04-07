@@ -1,4 +1,9 @@
-#Persisted sanitized pattern mapping
+# Persisted sanitized pattern mapping
+
+## WARNING
+
+This package is abandoned. Please use https://github.com/calien666/typo3-extended-routing
+instead. All features of this project are included there, too.
 
 ## What does it do?
 
