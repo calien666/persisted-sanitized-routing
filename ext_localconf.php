@@ -6,7 +6,7 @@
  * persisted_sanitized_routing
  */
 
-(function () {
+(static function () {
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['aspects']['PersistedSanitizedPatternMapper']
         = \Calien\PersistedSanitizedRouting\Routing\Aspect\PersistedSanitizedPatternMapper::class;
 })();
